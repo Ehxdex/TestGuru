@@ -12,21 +12,21 @@ Test.destroy_all
 Category.destroy_all
 User.destroy_all
 
-u1 = User.create(name: 'User1', email: 'test1@test.com')
+u1 = User.create!(name: 'User1', email: 'test1@test.com')
 
-c1 = Category.create(title: 'Ruby')
-c2 = Category.create(title: 'JS')
+c1 = Category.create!(title: 'Ruby')
+c2 = Category.create!(title: 'JS')
 
-t1 = Test.create(title: 'Ruby beginner', level: 1, category_id: c1.id, author_id: u1.id)
-t2 = Test.create(title: 'Ruby advanced', level: 2, category_id: c1.id, author_id: u1.id)
-t3 = Test.create(title: 'JS beginner', level: 1, category_id: c2.id, author_id: u1.id)
-t4 = Test.create(title: 'JS advanced', level: 2, category_id: c2.id, author_id: u1.id)
+t1 = Test.create!(title: 'Ruby beginner', level: 1, category_id: c1.id, author_id: u1.id)
+t2 = Test.create!(title: 'Ruby advanced', level: 2, category_id: c1.id, author_id: u1.id)
+t3 = Test.create!(title: 'JS beginner', level: 1, category_id: c2.id, author_id: u1.id)
+t4 = Test.create!(title: 'JS advanced', level: 2, category_id: c2.id, author_id: u1.id)
 
-q1 = Question.create(body: 'What are objects in Ruby?', test_id: t1.id)
-q2 = Question.create(body: "What's difference between 'puts' 'print'?", test_id: t1.id)
-q3 = Question.create(body: 'What is the difference between calling super and calling super()?', test_id: t2.id)
-q4 = Question.create(body: 'What is React JS?', test_id: t3.id)
-q5 = Question.create(body: 'Where you can use AWAIT operator?', test_id: t4.id)
+q1 = Question.create!(body: 'What are objects in Ruby?', test_id: t1.id)
+q2 = Question.create!(body: "What's difference between 'puts' 'print'?", test_id: t1.id)
+q3 = Question.create!(body: 'What is the difference between calling super and calling super()?', test_id: t2.id)
+q4 = Question.create!(body: 'What is React JS?', test_id: t3.id)
+q5 = Question.create!(body: 'Where you can use AWAIT operator?', test_id: t4.id)
 
 Answer.create!([
   { body: 'Everything in Ruby is an object.', correct: true, question_id: q1.id },
