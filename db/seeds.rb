@@ -6,43 +6,51 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-Test.destroy_all
-Question.destroy_all
-User.destroy_all
-Category.destroy_all
 Answer.destroy_all
+Question.destroy_all
+Test.destroy_all
+Category.destroy_all
+User.destroy_all
 
-User.create!([
-  { name: 'User1', email: 'test@test.com' },
-  { name: 'User2', email: 'test1@test.com' },
-  { name: 'User3', email: 'test2@test.com' },
-])
+u1 = User.create(name: 'User1', email: 'test1@test.com')
 
-Category.create!([
-  { title: 'Ruby' },
-  { title: 'JS' },
-  { title: 'Swift' },
-  { title: 'C++' },
-  { title: 'Assembler' }
-])
+c1 = Category.create(title: 'Ruby')
+c2 = Category.create(title: 'JS')
 
-Test.create!([
-  { title: 'Frontend', level: 1, category_id: 2, author_id: 1 },
-  { title: 'Backend', level: 2, category_id: 1, author_id: 1 },
-  { title: 'Mobile Development', level: 3, category_id: 3, author_id: 2 },
-  { title: 'Machine Learning', level: 4, category_id: 4, author_id: 2 },
-  { title: 'Low-level Development', level: 5, category_id: 5, author_id: 3 }
-])
+t1 = Test.create(title: 'Ruby beginner', level: 1, category_id: c1.id, author_id: u1.id)
+t2 = Test.create(title: 'Ruby advanced', level: 2, category_id: c1.id, author_id: u1.id)
+t3 = Test.create(title: 'JS beginner', level: 1, category_id: c2.id, author_id: u1.id)
+t4 = Test.create(title: 'JS advanced', level: 2, category_id: c2.id, author_id: u1.id)
 
-Question.create!([
-  { body: 'What is React JS?', test_id: 1 },
-  { body: 'What is the difference between calling super and calling super()?', test_id: 2 },
-  { body: 'How would you compare two tuples to ensure their values are identical?', test_id: 3 },
-  { body: 'How does CloudKit differ from Core Data?', test_id: 3 },
-  { body: 'What are objects in Ruby?', test_id: 2 }
-])
+q1 = Question.create(body: 'What are objects in Ruby?', test_id: t1.id)
+q2 = Question.create(body: "What's difference between 'puts' 'print'?", test_id: t1.id)
+q3 = Question.create(body: 'What is the difference between calling super and calling super()?', test_id: t2.id)
+q4 = Question.create(body: 'What is React JS?', test_id: t3.id)
+q5 = Question.create(body: 'Where you can use AWAIT operator?', test_id: t4.id)
 
 Answer.create!([
-  { body: 'React is the library for web and native user interfaces. Build user interfaces out of individual pieces called components written in JavaScript.', correct: true, question_id: 1 },
-  { body: 'Everything in Ruby is an object.', correct: true, question_id: 5 }
+  { body: 'Everything in Ruby is an object.', correct: true, question_id: q1.id },
+  { body: 'There are no objects in ruby.', correct: false, question_id: q1.id },
+  { body: 'Only class instances.', correct: false, question_id: q1.id },
+  { body: 'Only strings.', correct: false, question_id: q1.id },
+
+  { body: 'Same functions.', correct: false, question_id: q2.id },
+  { body: 'PUTS and PRINT same as P function', correct: false, question_id: q2.id },
+  { body: 'PUTS add a new line at the end, PRINT same line', correct: true, question_id: q2.id },
+  { body: 'PRINT add a new line at the end, PUTS same line', correct: false, question_id: q2.id },
+
+  { body: 'No difference', correct: false, question_id: q3.id },
+  { body: 'SUPER() - no arguments, SUPER - send all arguments passed to the function to parent.', correct: true, question_id: q3.id },
+  { body: 'SUPER - no arguments, SUPER() - send all arguments passed to the function to parent.', correct: false, question_id: q3.id },
+  { body: 'SUPER and SUPER() no arguments', correct: false, question_id: q3.id },
+
+  { body: 'Game framework', correct: false, question_id: q4.id },
+  { body: 'Backend library', correct: false, question_id: q4.id },
+  { body: 'Library for web and native user interfaces.', correct: true, question_id: q4.id },
+  { body: 'Machine learning framefork', correct: false, question_id: q4.id },
+
+  { body: 'An async function or at the top level of module.z', correct: true, question_id: q5.id },
+  { body: 'Just an async function', correct: true, question_id: q5.id },
+  { body: 'Just at the top level of module.z', correct: true, question_id: q5.id },
+  { body: 'Same as WARN()', correct: false, question_id: q5.id }
 ])
