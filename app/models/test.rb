@@ -1,9 +1,6 @@
 class Test < ApplicationRecord
-  belongs_to :category
-  belongs_to :user
-  has_many :questions
-
-  def self.sort_by(category)
-    Test.where(categories: { title: category}).joins(:category).order(title: :DESC).pluck(:title)
+  def self.sorting_by(cat)
+    joins("JOIN categories ON tests.category_id = categories.id WHERE categories.title = '#{cat}' ORDER BY tests.title DESC")
+      .select(:title).map(&:title)    # .pluck(:title)
   end
 end
