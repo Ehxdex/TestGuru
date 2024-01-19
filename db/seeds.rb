@@ -60,3 +60,7 @@ Answer.create!([
   { body: 'Just at the top level of module.z', correct: false, question_id: questions[4].id },
   { body: 'Same as WARN()', correct: false, question_id: questions[4].id }
 ])
+
+Result.create!([
+  { users[0].id, tests[0].id }
+])
