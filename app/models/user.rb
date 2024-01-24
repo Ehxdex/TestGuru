@@ -6,5 +6,7 @@ class User < ApplicationRecord
   validates :name, length: { minimum: 2 }, presence: true
   validates :email, presence: true, uniqueness: true
 
-  scope :passed_tests_by_level, ->(level) { tests.where(level: level) }
+  def passed_tests_by_level(level)
+    tests.where(level: level)
+  end
 end
