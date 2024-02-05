@@ -14,9 +14,13 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    @test.questions.create(question_params)
-    
-    redirect_to test_questions_path
+    @question = @test.questions.build(question_params)
+
+    if @question.save
+      redirect_to test_questions_path
+    else
+      render :new 
+    end
   end
 
   def destroy
@@ -27,19 +31,19 @@ class QuestionsController < ApplicationController
 
   private
 
-    def find_test
-      @test = Test.find(params[:test_id])
-    end
+  def find_test
+    @test = Test.find(params[:test_id])
+  end
 
-    def find_question
-      @question = Question.find(params[:id])
-    end
-    
-    def question_params
-      params.require(:question).permit(:body)
-    end
+  def find_question
+    @question = Question.find(params[:id])
+  end
+  
+  def question_params
+    params.require(:question).permit(:body)
+  end
 
-    def record_question_not_found
-      render plain: "Question Not Found"
-    end
+  def record_question_not_found
+    render plain: "Question Not Found"
+  end
 end
