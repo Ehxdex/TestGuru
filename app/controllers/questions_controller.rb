@@ -1,24 +1,40 @@
 class QuestionsController < ApplicationController
-  def index
-    @test = Test.find(test_params)
-    render inline: "<ul><% @test.questions.each do |q| %>
-                      <li><%= q.id %>. <%= q.body %></li>
-                    </ul><% end %>"
+  before_action :find_test, only: [:index, :create]
+  before_action :find_question, only: [:show, :destroy]
+  
+  def index 
   end
 
   def show
-    @question = Question.find(question_params)
-
-    render plain: @question.body
   end
   
+  def new
+  end
+
+  def create
+    @test.questions.create(question_params)
+    
+    redirect_to test_questions_path
+  end
+
+  def destroy
+    @question.destroy
+    flash[:success] = "Question deleted"
+
+    redirect_to test_questions_path(@question.test.id)
+  end
+
   private
 
-  def test_params
-    params[:test_id]
+  def find_test
+    @test = Test.find(params[:test_id])
+  end
+
+  def find_question
+    @question = Question.find(params[:id])
   end
   
   def question_params
-    params[:id]
+    params.require(:question).permit(:body)
   end
 end
