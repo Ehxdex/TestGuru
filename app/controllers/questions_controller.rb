@@ -4,13 +4,14 @@ class QuestionsController < ApplicationController
 
   rescue_from ActiveRecord::RecordNotFound, with: :record_question_not_found
   
-  def index 
+  def index
   end
 
   def show
   end
   
   def new
+    @question = find_test.questions.build
   end
 
   def create
@@ -22,7 +23,10 @@ class QuestionsController < ApplicationController
       render :new 
     end
   end
-
+  
+  def edit
+  end
+  
   def destroy
     @question.destroy
 
