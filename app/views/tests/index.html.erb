@@ -1,0 +1,6 @@
+<h3>Tests:</h3>
+
+<% @tests.each do |t| %>
+  <p><%= t.id %>. <%= t.title %></p>
+  <p>The test contains <%= t.questions.count %> questions</p>
+<% end %>
