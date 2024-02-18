@@ -4,6 +4,6 @@
 
 <h3>Questions:</h3>
 
-<% @test.questions.each do |q| %>
-  <p><%= q.id %>. <%= q.body %></p>
+<% @test.questions.each_with_index do |q, i| %>
+  <p><%= i + 1 %>. <%= q.body %></p>
 <% end %>
