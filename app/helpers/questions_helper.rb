@@ -1,5 +1,5 @@
 module QuestionsHelper
-  def question_header
-    "<#{@test.title}>"
+  def question_header(title)
+    "<#{title}>"
   end
 end
