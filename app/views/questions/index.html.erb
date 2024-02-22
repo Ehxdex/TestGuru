@@ -1,9 +1,0 @@
-<h3>Test:</h3>
-
-<p><%= @test.title %></p>
-
-<h3>Questions:</h3>
-
-<% @test.questions.each_with_index do |q, i| %>
-  <p><%= i + 1 %>. <%= q.body %></p>
-<% end %>

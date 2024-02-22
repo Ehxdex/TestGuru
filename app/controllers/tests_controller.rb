@@ -11,16 +11,15 @@ class TestsController < ApplicationController
   end
 
   def new
-    @test = Test.new
+    @test = set_author.tests.build
   end
 
   def create
-    @test = Test.new(test_params)
-
-    @test.author = User.first
+    @test = set_author.tests.build(test_params)
+    @test.author = set_author
 
     if @test.save
-      redirect_to tests_path
+      redirect_to @test
     else
       render :new, status: :unprocessable_entity
     end
@@ -31,7 +30,7 @@ class TestsController < ApplicationController
 
   def update
     if @test.update(test_params)
-      redirect_to tests_path
+      redirect_to @test
     else
       render :edit, status: :unprocessable_entity
     end
@@ -47,6 +46,10 @@ class TestsController < ApplicationController
 
   def find_test
     @test = Test.find(params[:id])
+  end
+
+  def set_author
+    @author = User.first
   end
 
   def test_params
