@@ -11,11 +11,11 @@ class TestsController < ApplicationController
   end
 
   def new
-    @test = set_author.tests.build
+    @test = Test.new
   end
 
   def create
-    @test = set_author.tests.build(test_params)
+    @test = Test.new(test_params)
     @test.author = set_author
 
     if @test.save
@@ -49,7 +49,7 @@ class TestsController < ApplicationController
   end
 
   def set_author
-    @author = User.first
+    @author ||= User.first
   end
 
   def test_params
