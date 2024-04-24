@@ -13,4 +13,7 @@
   <% end %>
 
   <p><%= form.submit 'Next' %></p>
+
+  <p>Номер текущего вопроса: <%= @test_passage.question_number %></p>
+  <p>Всего вопросов в тесте: <%= @test_passage.questions_count %>
 <% end %>
