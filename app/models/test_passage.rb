@@ -17,7 +17,7 @@ class TestPassage < ApplicationRecord
   end
 
   def success_calculation
-    correct_questions * 100 / test.questions.count
+    (correct_questions.to_f * 100 / test.questions.count).round
   end
 
   def question_number

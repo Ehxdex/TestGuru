@@ -1,6 +1,5 @@
 class TestsController < ApplicationController
   before_action :set_test, only: [:show, :edit, :update, :destroy, :start]
-  before_action :set_user, only: :start
 
   rescue_from ActiveRecord::RecordNotFound, with: :record_test_not_found
 
@@ -8,8 +7,7 @@ class TestsController < ApplicationController
     @tests = Test.all
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @test = Test.new
@@ -26,8 +24,7 @@ class TestsController < ApplicationController
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @test.update(test_params)
@@ -44,8 +41,8 @@ class TestsController < ApplicationController
   end
 
   def start
-    @user.tests.push(@test)
-    redirect_to @user.test_passage(@test)
+    set_user.tests.push(@test)
+    redirect_to set_user.test_passage(@test)
   end
 
   private
