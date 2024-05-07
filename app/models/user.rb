@@ -2,11 +2,11 @@ require 'digest/sha1'
 
 class User < ApplicationRecord
 
-  include Auth
-
   has_many :test_passages, dependent: :destroy
   has_many :tests, through: :test_passages, dependent: :destroy
   has_many :tests_author, class_name: 'Test', foreign_key: 'author_id', dependent: :destroy
+
+  has_secure_password
 
   def passed_tests_by_level(level)
     tests.where(level: level)
