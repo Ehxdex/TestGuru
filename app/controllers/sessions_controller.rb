@@ -12,4 +12,10 @@ class SessionsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
+  def destroy
+    session.delete(:user_id)
+
+    redirect_to login_path, notice: "You are logged out."
+  end
 end

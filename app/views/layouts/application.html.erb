@@ -13,6 +13,10 @@
   <body>
     <% if logged_in? %>
       <p class="nav user">Welcome, <b><%= current_user.email %></b> Guru</p>
+      <p><%= button_to 'Exit', session_path(:user_id), method: :delete %></p>
+    <% else %>
+      <p><%= link_to "Logged in", login_path %></p>
+      <p><%= link_to "Sign in", signup_path %></p>
     <% end %>
 
     <%= yield %>
