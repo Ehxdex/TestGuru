@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:email])
     if user&.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to tests_path
+      redirect_to cookies.delete(:return) || tests_path
     else
       flash.now[:alert] = 'Are you a Guru? Verify your Email and Password please'
       render :new, status: :unprocessable_entity
