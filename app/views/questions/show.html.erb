@@ -10,11 +10,11 @@
   <%= render @question.answers %>
 </ol>
 
-<p><%= link_to "Edit", edit_question_path %></p>
+<p><%= link_to "Edit", edit_question_path(@question) %></p>
 <p><%= link_to "Delete question", question_path(@question), data: {
                     turbo_method: :delete,
                     turbo_confirm: "Are you sure?"
                   }  %></p>
 
 
-<p><%= link_to "Back", tests_path %></p>
+<p><%= link_to "Back", admin_tests_path(@question.test) %></p>
