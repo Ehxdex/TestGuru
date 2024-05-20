@@ -13,7 +13,7 @@ Test.destroy_all
 Category.destroy_all
 User.destroy_all
 
-users = User.create!([name: 'User1', email: 'test1@test.com', password: 'iamaguru', password_confirmation: 'iamaguru'])
+users = User.create!([first_name: 'User1', last_name: 'User1', email: 'test1@test.com', password: 'iamaguru', password_confirmation: 'iamaguru'])
 
 categories = Category.create!([
   { title: 'Ruby' },
