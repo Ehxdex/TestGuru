@@ -12,11 +12,11 @@ class Admin::TestsController < Admin::BaseController
   def show; end
 
   def new
-    @test = @user.tests.build
+    @test = current_user.tests.build
   end
 
   def create
-    @test = @user.tests_author.build(test_params)
+    @test = current_user.tests_author.build(test_params)
 
     if @test.save
       redirect_to admin_tests_path
