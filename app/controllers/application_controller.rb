@@ -8,7 +8,6 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(user)
-    flash[:notice] = "Welcome, #{current_user.first_name} #{current_user.last_name}"
     user.is_a?(Admin) ? admin_tests_path : tests_path
   end
 end

@@ -1,7 +1,6 @@
 class Admin::TestsController < Admin::BaseController
   
-  before_action :set_test, only: [:show, :edit, :update, :destroy, :start]
-  before_action :set_user, only: [:new, :create]
+  before_action :set_test, only: [:show, :edit, :update, :destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :record_test_not_found
 
@@ -41,19 +40,10 @@ class Admin::TestsController < Admin::BaseController
     redirect_to admin_tests_path
   end
 
-  def start
-    current_user.tests.push(@test)
-    redirect_to current_user.test_passage(@test)
-  end
-
   private
 
   def set_test
     @test = Test.find(params[:id])
-  end
-
-  def set_user
-    @user = User.first
   end
 
   def test_params
