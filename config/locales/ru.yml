@@ -1,2 +1,6 @@
 ru:
- hello: "Привет"
+  hello: "Привет"
+
+  tests:
+    index:
+      header: "Доступные тесты"
