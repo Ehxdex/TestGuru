@@ -6,6 +6,8 @@ ru:
       test:
         create: "Создать тест"
         update: "Обновить тест"
+      user:
+        create: "Войти"
     label:
       test:
         title: "Название"
@@ -22,3 +24,31 @@ ru:
         header: "Доступные тесты:"
       create:
         success: "Тест успешно создан."
+
+  errors:
+    messages:
+      not_saved: 
+        one: "Обнаружена %{count} ошибка"
+        few: "Обнаружены %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        other: "Обнаружены %{count} ошибки"
+
+  devise:
+    registrations:
+      new: 
+        header: "Зарегистрироваться"
+    sessions:
+      new:
+        header: "Войти на сайт"
+    shared:
+      links:
+        signup: "Зарегистрироваться"
+        login: "Войти"
+        forgot_your_password: "Забыли пароль?"
+        confirmation_instructions: "Не получил инструкций по подтверждению"
+        unlock_instructions: "Не получил инструкции по разблокировке"
+    confirmation:
+      new:
+        header: "Отправить инструкиции по подтверждению"
+
+

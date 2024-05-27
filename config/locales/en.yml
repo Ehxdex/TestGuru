@@ -53,3 +53,9 @@ en:
         header: "Tricky tests:"
       create:
         success: "Test was successfully created."
+
+  errors:
+    messages:
+      not_saved: 
+        one: "Detected %{count} error"
+        other: "Detected %{count} errors"
