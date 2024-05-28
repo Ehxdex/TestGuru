@@ -78,6 +78,7 @@ en:
     nav:
       admin_panel: "TestGuru Admin Panel"
       logout: "Logout"
+
     tests:
       index:
         header: "Tricky tests:"
@@ -110,6 +111,44 @@ en:
         edit: "Edit"
         delete: "Delete"
         confirm: "Are you sure?"
+    
+    questions:
+      question:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you shure?"
+      new:
+        back: "Back"
+      show:
+        question_header: "Question"
+        answer_header: "Answers"
+        new_answer: "New answer"
+        edit: "Edit"
+        delete: "Delete question"
+        confirm: "Are you sure?"
+        back: "Back"
+      edit:
+        back: "Back"
+    
+    answers:
+      new:
+        header: "New answer"
+        back: "Back to answers"
+      show:
+        question_header: "Questiom"
+        answer_header: "Answer"
+        correct: "Correct"
+        back: "Back"
+      edit:
+        header: "Edit answer"
+        back: "back to answers"
+      show:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete answer"
+        confirm: "Are you sure?"
+        back: "Back"
 
   errors:
     messages:

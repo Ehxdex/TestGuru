@@ -7,7 +7,6 @@ ru:
       logo: "Тест Гуру"
       logout: "Выйти"
 
-
   helpers:
     submit:
       test:
@@ -50,6 +49,7 @@ ru:
       admin_panel: "ТестГуру Административная Панель"
       greeting: "Добро пожаловать"
       logout: "Выйти"
+
     tests:
       index:
         header: "Доступные тесты:"
@@ -82,6 +82,44 @@ ru:
         edit: "Редактировать"
         delete: "Удалить"
         confirm: "Вы уверены?"
+
+    questions:
+      question:
+        show: "Показать"
+        edit: "Редактировать"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
+      new:
+        back: "Назад"
+      show:
+        question_header: "Вопрос"
+        answer_header: "Ответы"
+        new_answer: "Новый ответ"
+        edit: "Редактировать"
+        delete: "Удалить вопрос"
+        confirm: "Вы уверены?"
+        back: "Назад"
+      edit:
+        back: "Назад"
+    
+    answers:
+      new:
+        header: "Новый ответ"
+        back: "Вернуться к ответам"
+      show:
+        question_header: "Вопрос"
+        answer_header: "Ответ"
+        correct: "Верный ответ"
+        back: "Назад"
+      edit:
+        header: "Редактировать ответ"
+        back: "Вернуться к ответам"
+      show:
+        show: "Показать"
+        edit: "Редактировать"
+        delete: "Удалить ответ"
+        confirm: "Вы уверены?"
+        back: "Назад"
 
   errors:
     messages:
