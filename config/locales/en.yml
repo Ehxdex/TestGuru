@@ -75,11 +75,41 @@ en:
       move_back: "Back to tests"
 
   admin:
+    nav:
+      admin_panel: "TestGuru Admin Panel"
+      logout: "Logout"
     tests:
       index:
         header: "Tricky tests:"
+        title: "Title"
+        questions: "Questions"
+        level:  "Level"
+        category: "Category"
+        author: "Author"
+        actions: "Actions"
+        new_test: "Create new test"
+      show:
+        test_header: "Test"
+        title: "Title"
+        level: "Level"
+        category_id: "Category ID"
+        questions_header: "Questions"
+        new_question: "New question"
+        edit_test: "Edit test"
+        back: "Back"
+      new:
+        header: "Create new test"
+        back: "Back"
       create:
         success: "Test was successfully created."
+      edit:
+        header: "Edit test"
+        back: "Back"
+      test:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
 
   errors:
     messages:

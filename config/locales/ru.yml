@@ -46,11 +46,42 @@ ru:
       move_back: "Вернуться к тестам"
 
   admin:
+    nav:
+      admin_panel: "ТестГуру Административная Панель"
+      greeting: "Добро пожаловать"
+      logout: "Выйти"
     tests:
       index:
         header: "Доступные тесты:"
+        title: "Название"
+        questions: "Вопросов"
+        level:  "Уровень"
+        category: "Категория" 
+        author: "Автор"
+        actions: "Действия"
+        new_test: "Создать новый тест"
+      show:
+        test_header: "Тест"
+        title: "Название"
+        level: "Уровень"
+        category_id: "ID категории"
+        questions_header: "Вопросы"
+        new_question: "Новый вопрос"
+        edit_test: "Редактировать тест"
+        back: "Назад"
+      new:
+        header: "Создать новый тест"
+        back: "Назад"
       create:
         success: "Тест успешно создан."
+      edit:
+        header: "Редактировать тест"
+        back: "Назад"
+      test:
+        show: "Показать"
+        edit: "Редактировать"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
 
   errors:
     messages:
