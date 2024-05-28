@@ -32,11 +32,19 @@
 en:
   hello: "Hello world"
 
+  layouts:
+    application:
+      greeting: "Welcome"
+      logo: "Test Guru"
+      logout: "Logout"
+
   helpers:
     submit:
       test:
         create: "Create new test"
         update: "Update test"
+      user:
+        create: "Done"
     label:
       test:
         title: "Title"
@@ -46,6 +54,25 @@ en:
   tests:
     index:
       header: "Tricky tests:"
+      title: "Title"
+      questions: "Questions"
+      level:  "Level"
+      category: "Category" 
+      actions: "Actions"
+    test:
+      start: "Start"
+
+  test_passages:
+    show:
+      header: "Passing the"
+      next: "Следующий вопрос"
+      question_number: "Number of current question"
+      question_count: "Total questions in the test"
+    result:
+      header: "The Test was Completed!"
+      passed: "Test passed!"
+      failed: "Test failed!"
+      move_back: "Back to tests"
 
   admin:
     tests:
@@ -59,3 +86,23 @@ en:
       not_saved: 
         one: "Detected %{count} error"
         other: "Detected %{count} errors"
+
+  devise:
+    registrations:
+      new: 
+        header: "Registration"
+        count_characters: "minimum characters"
+    sessions:
+      new:
+        header: "Enter"
+    shared:
+      links:
+        signup: "Registration"
+        login: "Enter"
+        forgot_your_password: "Forgot your password?"
+        confirmation_instructions: "Recieve confirmation instructions"
+        unlock_instructions: "Recieve unlock instruction"
+    confirmations:
+      new:
+        header: "Recieve confirmation instructions"
+        send: "Send"

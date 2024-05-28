@@ -1,13 +1,21 @@
 ru:
   hello: "Привет!"
 
+  layouts:
+    application:
+      greeting: "Добро пожаловать"
+      logo: "Тест Гуру"
+      logout: "Выйти"
+
+
   helpers:
     submit:
       test:
         create: "Создать тест"
         update: "Обновить тест"
       user:
-        create: "Войти"
+        create: "Готово"
+
     label:
       test:
         title: "Название"
@@ -17,6 +25,25 @@ ru:
   tests:
     index:
       header: "Доступные тесты:"
+      title: "Название"
+      questions: "Вопросов"
+      level:  "Уровень"
+      category: "Категория" 
+      actions: "Действия"
+    test:
+      start: "Начать"
+    
+  test_passages:
+    show:
+      header: "Прохождение"
+      next: "Следующий вопрос"
+      question_number: "Номер текущего вопроса"
+      question_count: "Всего вопросов в тесте"
+    result:
+      header: "Тест завершен!"
+      passed: "Вы прошли тест!"
+      failed: "Тест не пройден!"
+      move_back: "Вернуться к тестам"
 
   admin:
     tests:
@@ -37,6 +64,7 @@ ru:
     registrations:
       new: 
         header: "Зарегистрироваться"
+        count_characters: "символов минимум"
     sessions:
       new:
         header: "Войти на сайт"
@@ -47,8 +75,7 @@ ru:
         forgot_your_password: "Забыли пароль?"
         confirmation_instructions: "Не получил инструкций по подтверждению"
         unlock_instructions: "Не получил инструкции по разблокировке"
-    confirmation:
+    confirmations:
       new:
         header: "Отправить инструкиции по подтверждению"
-
-
+        send: "Отправить"
