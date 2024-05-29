@@ -69,7 +69,7 @@ en:
       question_number: "Number of current question"
       question_count: "Total questions in the test"
     result:
-      header: "The Test was Completed!"
+      header: "The Test %{title} was Completed!"
       passed: "Test passed!"
       failed: "Test failed!"
       move_back: "Back to tests"
@@ -119,6 +119,7 @@ en:
         delete: "Delete"
         confirm: "Are you shure?"
       new:
+        header: "Create %{title} new question"
         back: "Back"
       show:
         question_header: "Question"
@@ -129,6 +130,7 @@ en:
         confirm: "Are you sure?"
         back: "Back"
       edit:
+        header: "Edit %{title} question"
         back: "Back"
     
     answers:
@@ -175,3 +177,7 @@ en:
       new:
         header: "Recieve confirmation instructions"
         send: "Send"
+
+  test_mailer:
+    completed_test:
+      subject: "You just completed the TestGuru test!"

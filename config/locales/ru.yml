@@ -39,7 +39,7 @@ ru:
       question_number: "Номер текущего вопроса"
       question_count: "Всего вопросов в тесте"
     result:
-      header: "Тест завершен!"
+      header: "Тест %{title} успешно завершен!"
       passed: "Вы прошли тест!"
       failed: "Тест не пройден!"
       move_back: "Вернуться к тестам"
@@ -90,6 +90,7 @@ ru:
         delete: "Удалить"
         confirm: "Вы уверены?"
       new:
+        header: "Создать %{title} новый вопрос"
         back: "Назад"
       show:
         question_header: "Вопрос"
@@ -100,6 +101,7 @@ ru:
         confirm: "Вы уверены?"
         back: "Назад"
       edit:
+        header: "Редактирование %{title} вопроса"
         back: "Назад"
     
     answers:
@@ -148,3 +150,7 @@ ru:
       new:
         header: "Отправить инструкиции по подтверждению"
         send: "Отправить"
+
+  test_mailer:
+    completed_test:
+      subject: "Вы успешно завершили тест на TestGuru!"
