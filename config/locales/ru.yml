@@ -137,6 +137,9 @@ ru:
     sessions:
       new:
         header: "Войти на сайт"
+        enter_email: "Введите e-mail"
+        remember_me: "Запомнить меня"
+        enter: "Войти"
     shared:
       links:
         signup: "Зарегистрироваться"
@@ -165,3 +168,8 @@ ru:
       logout: "Выйти"
       signup: "Зарегистрироваться"
       login: "Войти"
+
+  users:
+    sessions:
+      create:
+        hello: "Привет!"

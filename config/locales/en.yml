@@ -164,6 +164,9 @@ en:
     sessions:
       new:
         header: "Enter"
+        enter_email: "Enter e-mail"
+        remember_me: "Remember me"
+        enter: "Enter"
     shared:
       links:
         signup: "Registration"
@@ -190,3 +193,8 @@ en:
       logout: "Exit"
       signup: "Sign up"
       login: "Log in"
+  
+  users:
+    sessions:
+      create:
+        hello: "Hello!"
