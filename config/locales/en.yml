@@ -35,8 +35,6 @@ en:
   layouts:
     application:
       greeting: "Welcome"
-      logo: "Test Guru"
-      logout: "Logout"
 
   helpers:
     submit:
@@ -187,3 +185,8 @@ en:
       header:
         one: "%{count} error detected"
         other: "${count} errors detected"
+    nav:
+      logo: "TestGuru"
+      logout: "Exit"
+      signup: "Sign up"
+      login: "Log in"
