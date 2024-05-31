@@ -37,7 +37,7 @@ ru:
       question_number: "Номер текущего вопроса"
       question_count: "Всего вопросов в тесте"
     result:
-      header: "Тест %{title} успешно завершен!"
+      header: "Тест %{title} завершен!"
       passed: "Вы прошли тест!"
       failed: "Тест не пройден!"
       move_back: "Вернуться к тестам"
