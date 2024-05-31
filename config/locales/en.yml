@@ -32,10 +32,6 @@
 en:
   hello: "Hello world"
 
-  layouts:
-    application:
-      greeting: "Welcome"
-
   helpers:
     submit:
       test:
@@ -74,7 +70,8 @@ en:
 
   admin:
     nav:
-      admin_panel: "TestGuru Admin Panel"
+      logo: "TestGuru"
+      admin_panel: "Admin panel"
       logout: "Logout"
 
     tests:
@@ -189,7 +186,9 @@ en:
         one: "%{count} error detected"
         other: "${count} errors detected"
     nav:
+      greeting: "Welcome"
       logo: "TestGuru"
+      admin_panel: "Admin panel"
       logout: "Exit"
       signup: "Sign up"
       login: "Log in"

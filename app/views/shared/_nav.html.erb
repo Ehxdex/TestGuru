@@ -1,5 +1,8 @@
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-light bg-light p-4">
   <%= link_to t(".logo"), root_path, class: 'navbar-brand' %> 
+  <% if current_user.is_a?(Admin) %>
+    <%= link_to t(".admin_panel"), admin_tests_path %>
+  <% end %>
 
   <span class="navbar-text">
     <% if user_signed_in? %>

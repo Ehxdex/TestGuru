@@ -1,10 +1,6 @@
 ru:
   hello: "Привет!"
 
-  layouts:
-    application:
-      greeting: "Добро пожаловать"
-
   helpers:
     submit:
       test:
@@ -44,7 +40,8 @@ ru:
 
   admin:
     nav:
-      admin_panel: "ТестГуру Административная Панель"
+      logo: "ТестГуру"
+      admin_panel: "Административная панель"
       greeting: "Добро пожаловать"
       logout: "Выйти"
 
@@ -164,7 +161,9 @@ ru:
         one: "Обнаружена %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
     nav:
+      greeting: "Добро пожаловать"
       logo: "ТестГуру"
+      admin_panel: "Административная панель"
       logout: "Выйти"
       signup: "Зарегистрироваться"
       login: "Войти"
