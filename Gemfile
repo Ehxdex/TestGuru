@@ -52,6 +52,10 @@ gem "sassc-rails"
 
 gem 'devise', '~> 4.0'
 
+# NETWORKING
+
+gem 'faraday'
+
 # LOCALIZATION
 gem 'devise-i18n'
 gem 'rails-i18n', '~> 7.0.0'
