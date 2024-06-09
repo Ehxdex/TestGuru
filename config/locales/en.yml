@@ -67,6 +67,9 @@ en:
       passed: "Test passed!"
       failed: "Test failed!"
       move_back: "Back to tests"
+    gist:
+      success: "Gist was succesfully created!"
+      failure: "An error occured while saving gist"
 
   admin:
     nav:

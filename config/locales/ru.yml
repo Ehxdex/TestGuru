@@ -37,6 +37,9 @@ ru:
       passed: "Вы прошли тест!"
       failed: "Тест не пройден!"
       move_back: "Вернуться к тестам"
+    gist:
+      success: "Gist успешно сохранен!"
+      failure: "Во время сохранения gist произошла ошибка"
 
   admin:
     nav:
