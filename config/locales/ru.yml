@@ -38,7 +38,7 @@ ru:
       failed: "Тест не пройден!"
       move_back: "Вернуться к тестам"
     gist:
-      success: "Gist успешно сохранен!"
+      success: "Gist успешно сохранен! <a href=%{url} target=_blank rel=noopener noreferrer>посмотреть на Github</a>"
       failure: "Во время сохранения gist произошла ошибка"
 
   admin:

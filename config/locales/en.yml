@@ -68,7 +68,7 @@ en:
       failed: "Test failed!"
       move_back: "Back to tests"
     gist:
-      success: "Gist was succesfully created!"
+      success: "Gist was succesfully created! <a href=%{url} target=_blank rel=noopener noreferrer>show at Github</a>"
       failure: "An error occured while saving gist"
 
   admin:
