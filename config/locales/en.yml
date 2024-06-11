@@ -149,6 +149,14 @@ en:
         delete: "Delete answer"
         confirm: "Are you sure?"
         back: "Back"
+        
+    gists:
+      index:
+        header: "Gists:"
+        question: "Questions"
+        gist_url: "Gist URL"
+        user: "Userь"
+        root: "Main page"
 
   errors:
     messages:

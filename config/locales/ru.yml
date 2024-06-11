@@ -121,6 +121,14 @@ ru:
         confirm: "Вы уверены?"
         back: "Назад"
 
+    gists:
+      index:
+        header: "Гист:"
+        question: "Вопросы"
+        gist_url: "Адрес гист"
+        user: "Пользователь"
+        root: "Главная страница"
+
   errors:
     messages:
       not_saved: 

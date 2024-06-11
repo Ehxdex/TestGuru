@@ -27,6 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_11_052153) do
   end
 
   create_table "gists", force: :cascade do |t|
+    t.string "url", null: false
     t.integer "user_id", null: false
     t.integer "question_id", null: false
     t.datetime "created_at", null: false
