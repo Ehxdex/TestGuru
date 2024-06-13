@@ -30,6 +30,7 @@ ru:
     show:
       header: "Прохождение"
       next: "Следующий вопрос"
+      gist_question: "Гист Вопрос"
       question_number: "Номер текущего вопроса"
       question_count: "Всего вопросов в тесте"
     result:
@@ -37,7 +38,9 @@ ru:
       passed: "Вы прошли тест!"
       failed: "Тест не пройден!"
       move_back: "Вернуться к тестам"
-    gist:
+
+  gists:
+    create:
       success: "Gist успешно сохранен! <a href=%{url} target=_blank rel=noopener noreferrer>посмотреть на Github</a>"
       failure: "Во время сохранения gist произошла ошибка"
 

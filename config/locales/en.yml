@@ -60,14 +60,17 @@ en:
     show:
       header: "Passing the"
       next: "Следующий вопрос"
+      gist_question: "Gist Question"
       question_number: "Number of current question"
       question_count: "Total questions in the test"
     result:
       header: "The Test %{title} was Completed!"
       passed: "Test passed!"
       failed: "Test failed!"
-      move_back: "Back to tests"
-    gist:
+      move_back: "Back to tests"      
+  
+  gists:
+    create:
       success: "Gist was succesfully created! <a href=%{url} target=_blank rel=noopener noreferrer>show at Github</a>"
       failure: "An error occured while saving gist"
 

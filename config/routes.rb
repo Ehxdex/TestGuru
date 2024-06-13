@@ -9,13 +9,12 @@ Rails.application.routes.draw do
   end
 
   resources :test_passages, only: %i[show update] do
-    member do
-      get :result
-      post :gist
+    get :result, on: :member
 
-      get :gist
-    end
+    resources :gists, only: :create
   end
+
+  
 
   namespace :admin do
     resources :tests do
@@ -24,6 +23,6 @@ Rails.application.routes.draw do
       end
     end
 
-    get 'gists', to: 'gists#index'
+    resources :gists, only: :index
   end
 end
