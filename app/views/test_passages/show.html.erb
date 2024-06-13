@@ -19,5 +19,5 @@
     <p><%= t(".question_number") %>: <%= @test_passage.question_number %></p>
     <p><%= t(".question_count") %>: <%= @test_passage.questions_count %>
   <% end %>
-  <p><%= link_to t(".gist_question"), test_passage_gists_path(@test_passage), data: { turbo_method: :post } %></p>
+  <p><%= link_to t(".gist_question"), gists_path(test_passage: @test_passage), data: { turbo_method: :post } %></p>
 </div>

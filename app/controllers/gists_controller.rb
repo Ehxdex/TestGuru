@@ -6,7 +6,7 @@ class GistsController < ApplicationController
 
     flash_options = if result.success?
       
-      Gist.create!(url: result.gist_url,
+      current_user.gists.create!(url: result.gist_url,
                    user: @test_passage.user,
                    question: @test_passage.current_question)
       { notice: t('.success', url: result.gist_url) }
@@ -20,6 +20,6 @@ class GistsController < ApplicationController
   private
 
   def set_test_passage
-    @test_passage = TestPassage.find(params[:test_passage_id])
+    @test_passage = TestPassage.find(params[:test_passage])
   end
 end
