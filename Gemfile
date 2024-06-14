@@ -60,7 +60,13 @@ gem 'rails-i18n', '~> 7.0.0'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 5.3.3'
 
+# API
+gem "octokit", '~> 8.1.0'
+
 group :development, :test do
+  # Shim to load environment variables from .env
+  gem 'dotenv-rails'
+  
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end
