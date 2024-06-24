@@ -2,6 +2,7 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 import "utilities/sorting"
+import "utilities/check_password"
 
 //= require jquery3
 //= require popper
