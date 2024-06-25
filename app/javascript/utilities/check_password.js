@@ -1,10 +1,10 @@
 document.addEventListener('turbo:load', function () {
+  const newUserForm = document.querySelector("#new_user")
   const pass = document.querySelector('#user_password')
   const passConf = document.querySelector('#user_password_confirmation')
 
   if (pass && passConf) {
-      pass.addEventListener('input', changeBorderColor)
-      passConf.addEventListener('input', changeBorderColor)
+      newUserForm.parentNode.addEventListener('input', changeBorderColor)
   }
 
   function changeBorderColor() {
