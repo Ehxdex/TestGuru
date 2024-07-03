@@ -1,6 +1,6 @@
 class Admin::TestsController < Admin::BaseController
   before_action :set_tests, only: [:index, :update_inline]
-  before_action :set_test, only: [:show, :edit, :update, :destroy]
+  before_action :set_test, only: [:show, :edit, :update, :destroy, :update_inline]
 
   rescue_from ActiveRecord::RecordNotFound, with: :record_test_not_found
 
@@ -36,7 +36,7 @@ class Admin::TestsController < Admin::BaseController
     if @test.update(test_params)
       redirect_to admin_tests_path
     else
-      render :index
+      render :index, status: :unprocessable_entity
     end
   end
 
