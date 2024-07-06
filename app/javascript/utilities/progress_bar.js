@@ -1,8 +1,8 @@
 document.addEventListener('turbo:load', function() {
   const progressBar = document.querySelector('.progress-bar')
-  const progressBarValue = progressBar.dataset.progress
-
+  
   if (progressBar) {
+    const progressBarValue = progressBar.dataset.progress
     progressBar.style.width = progressBarValue + "%"
     progressBar.innerHTML = progressBarValue + "%"
   }
