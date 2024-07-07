@@ -83,6 +83,8 @@ ru:
         edit: "Редактировать"
         delete: "Удалить"
         confirm: "Вы уверены?"
+      form_inline:
+        submit: "ОК"
 
     questions:
       question:

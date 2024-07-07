@@ -1,3 +1,10 @@
+<div class="progress">
+  <%= content_tag :div, 
+      number_to_percentage(@test_passage.success_calculation, precision: 0), 
+      class: "progress-bar progress-bar-striped progress-bar-animated",
+      data: { progress: @test_passage.success_calculation } %>
+</div>
+
 <div class="fw-normal">
   <h1><%= t('.header')%> <%= @test_passage.test.title %>Test</h1>
 
