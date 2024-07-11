@@ -14,23 +14,11 @@ Category.destroy_all
 User.destroy_all
 
 users = User.create!([
-  first_name: 'User1', 
-  last_name: 'User1', 
-  email: 'test1@test.com', 
-  password: 'iamaguru', 
-  password_confirmation: 'iamaguru',
-  confirm: true
+  { first_name: 'User1', last_name: 'User1', email: 'test1@test.com', password: 'iamaguru', password_confirmation: 'iamaguru' },
+  { first_name: 'User2', last_name: 'User2', email: 'test2@test.com', password: 'iamaguruadmin', password_confirmation: 'iamaguruadmin',type: "Admin" }
 ])
-
-admin = User.create!([
-  first_name: 'User2', 
-  last_name: 'User2', 
-  email: 'test2@test.com', 
-  password: 'iamaguruadmin', 
-  password_confirmation: 'iamaguruadmin',
-  type: "Admin",
-  confirm: true
-])
+users[0].confirm
+users[1].confirm
 
 categories = Category.create!([
   { title: 'Ruby' },
