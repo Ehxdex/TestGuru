@@ -67,17 +67,17 @@ Rails.application.configure do
   # config.action_mailer.raise_delivery_errors = false
   config.action_mailer.perform_caching = false
   config.action_mailer.default_url_options = { host: 'https://testguru-83mu.onrender.com' }
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:              "smtp.yandex.ru",
+    tls:                  true,
+    address:              "smtp.yandex.com",
     port:                 465,
     user_name:            ENV['SMTP_USERNAME'],
     password:             ENV['SMTP_PASSWORD'],
-    domain:               "yandex.ru",
-    authentication:       "login",
-    tls:                  true,
-    enable_starttls_auto: false,
-    openssl_verify_mode:  'peer'
+    domain:               "yandex.com",
+    authentication:       "plain",
+    enable_starttls_auto: true
   }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
