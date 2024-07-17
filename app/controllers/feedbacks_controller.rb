@@ -7,7 +7,7 @@ class FeedbacksController < ApplicationController
     @feedback = Feedback.new(freedback_params)
   
     if @feedback.save
-      # send message
+      FeedbacksMailer.feedback_send(@feedback).deliver!
       redirect_to root_path
     else
       render :new
