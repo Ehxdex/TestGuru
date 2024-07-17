@@ -6,12 +6,6 @@
     
     <td class="align-middle"><%= link_to t(".show"), admin_feedback_path(feedback) %></td>
     <td class="align-middle">
-      <%= link_to t(".edit"), 
-                    edit_admin_feedback_path(feedback),
-                    data: { feedback_id: feedback.id },
-                    class: "form-inline-link" %>
-    </td>
-    <td class="align-middle">
       <%= link_to t(".delete"), 
                     admin_feedback_path(feedback), 
                     data: {

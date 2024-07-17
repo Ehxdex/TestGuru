@@ -2,12 +2,12 @@
 
 <table class="table">
   <tr>
-    <th><%= t('.questions') %></th>
-    <th><%= t('.level') %></th>
-    <th><%= t('.category') %></th>
-    <th><%= t('.author') %></th>
+    <th><%= t('.name') %></th>
+    <th><%= t('.email') %></th>
+    <th><%= t('.created_at') %></th>
+    <th><%= t('.actions') %></th>
   </tr>
   <%= render @feedback %>
 </table>
 
-<%= link_to 'Back', root_path %>
+<%= link_to t('.back'), root_path %>

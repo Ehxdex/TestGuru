@@ -7,7 +7,11 @@ class Admin::FeedbacksController < Admin::BaseController
 
   def show; end
 
-  def destroy; end
+  def destroy
+    @feedback.destroy
+
+    redirect_to admin_feedbacks_path
+  end
 
   private
 

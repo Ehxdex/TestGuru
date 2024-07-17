@@ -1,1 +1,7 @@
+<h3><%= t(".header") %>:</h3>
 
+<p><%= t(".name") %>: <%= @feedback.name %></p>
+<p><%= t(".email") %>: <%= @feedback.email %></p>
+<p><%= t(".created_at") %>: <%= @feedback.created_at %></p>
+
+<p><%= link_to t(".back"), admin_feedbacks_path %></p>
