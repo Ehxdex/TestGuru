@@ -1,0 +1,13 @@
+<h3><%= t('.header') %></h3>
+
+<table class="table">
+  <tr>
+    <th><%= t('.questions') %></th>
+    <th><%= t('.level') %></th>
+    <th><%= t('.category') %></th>
+    <th><%= t('.author') %></th>
+  </tr>
+  <%= render @feedback %>
+</table>
+
+<%= link_to 'Back', root_path %>
