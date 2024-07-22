@@ -1,4 +1,5 @@
 class FeedbacksController < ApplicationController
+  before_action :authenticate_user!
   def new
     @feedback = Feedback.new
   end
@@ -8,9 +9,9 @@ class FeedbacksController < ApplicationController
   
     if @feedback.save
       FeedbacksMailer.feedback_send(@feedback).deliver!
-      redirect_to root_path
+      redirect_to root_path, { notice: t('.success') }
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 

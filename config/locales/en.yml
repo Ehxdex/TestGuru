@@ -246,3 +246,5 @@ en:
     new:
       header: "Feedback"
       back: "Back"
+    create:
+      success: "Your feedback has been sent."

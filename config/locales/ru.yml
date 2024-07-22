@@ -221,3 +221,5 @@ ru:
     new:
       header: "Отзыв"
       back: "Назад"
+    create:
+      success: "Отзыв отправлен."
