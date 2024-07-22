@@ -39,7 +39,9 @@ questions = Question.create!([
   { body: "What's difference between 'puts' 'print'?", test: tests[0] },
   { body: 'What is the difference between calling super and calling super()?', test: tests[1] },
   { body: 'What is React JS?', test: tests[2] },
-  { body: 'Where you can use AWAIT operator?', test: tests[3] }
+  { body: 'Where you can use AWAIT operator?', test: tests[3] },
+  { body: 'What type of image maps could be used with JavaScript?', test: tests[4] },
+  { body: 'What java wrapper type is created when JavaScript object is sent to Java?', test: tests[5] }
 ])
 
 Answer.create!([
@@ -66,7 +68,17 @@ Answer.create!([
   { body: 'An async function or at the top level of module.z', correct: true, question: questions[4] },
   { body: 'Just an async function', correct: false, question: questions[4] },
   { body: 'Just at the top level of module.z', correct: false, question: questions[4] },
-  { body: 'Same as WARN()', correct: false, question: questions[4] }
+  { body: 'Same as WARN()', correct: false, question: questions[4] },
+
+  { body: 'Client-side image maps', correct: true, question: questions[5] },
+  { body: 'Server-side image maps', correct: false, question: questions[5] },
+  { body: 'Both A & B', correct: false, question: questions[5] },
+  { body: 'Localhost image maps', correct: false, question: questions[5] },
+
+  { body: 'ScriptObject', correct: false, question: questions[6] },
+  { body: 'JavaObject', correct: false, question: questions[6] },
+  { body: 'Jobject', correct: false, question: questions[6] },
+  { body: 'JSObject', correct: true, question: questions[6] }
 ])
 
 TestPassage.create!([
