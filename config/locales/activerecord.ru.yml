@@ -18,6 +18,10 @@ ru:
         password: "Пароль"
         password_confirmation: "Подтверждение пароля"
         remember_me: "Запомнить"
+      feedback:
+        name: "Имя"
+        email: "Email"
+        message: "Текст сообщения"
 
     errors:
       messages:

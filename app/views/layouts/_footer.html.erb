@@ -1,9 +1,12 @@
 <footer>
   <div class="fw-normal">
-  <hr class="solid">
-  <p>Andrey Reznichenko</p>
-  <p><%= current_year %></p>
-  <p><%= github_url('Ehxdex', 'TestGuru') %></p>
-  <p><%= link_to "Учебный проект в онлайн-школе Thinknetica", 'https://thinknetica.com', :target => "_blank", :rel => "noopener noreferrer" %></p>
+    <hr class="solid">
+    <p>Andrey Reznichenko</p>
+    <p><%= current_year %></p>
+    <p><%= github_url('Ehxdex', 'TestGuru') %></p>
+    <p><%= link_to "Учебный проект в онлайн-школе Thinknetica", 'https://thinknetica.com', :target => "_blank", :rel => "noopener noreferrer" %></p>
+    <% if user_signed_in? %>
+      <p><%= link_to t('.feedback'), new_feedback_path %></p>
+    <% end %>
   </div>
 </footer>

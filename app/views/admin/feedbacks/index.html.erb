@@ -1,0 +1,13 @@
+<h3><%= t('.header') %></h3>
+
+<table class="table">
+  <tr>
+    <th><%= t('.name') %></th>
+    <th><%= t('.email') %></th>
+    <th><%= t('.created_at') %></th>
+    <th><%= t('.actions') %></th>
+  </tr>
+  <%= render @feedback %>
+</table>
+
+<%= link_to t('.back'), root_path %>

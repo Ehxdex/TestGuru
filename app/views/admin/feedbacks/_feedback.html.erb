@@ -1,0 +1,17 @@
+<tbody>
+  <tr>
+    <td class="align-middle"><%= feedback.name %></td>
+    <td class="align-middle"><%= feedback.email %></td>
+    <td class="align-middle"><%= feedback.created_at %>
+    
+    <td class="align-middle"><%= link_to t(".show"), admin_feedback_path(feedback) %></td>
+    <td class="align-middle">
+      <%= link_to t(".delete"), 
+                    admin_feedback_path(feedback), 
+                    data: {
+                      turbo_method: :delete,
+                      turbo_confirm: t(".confirm")
+                    } %>
+    </td>             
+  </tr>
+</tbody>
