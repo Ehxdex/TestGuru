@@ -7,10 +7,12 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 TestPassage.destroy_all
+UserBadge.destroy_all
 Answer.destroy_all
 Question.destroy_all
 Test.destroy_all
 Category.destroy_all
+Badge.destroy_all
 User.destroy_all
 
 users = User.create!([
@@ -84,4 +86,10 @@ Answer.create!([
 TestPassage.create!([
   { user: users[0], test: tests[0], current_question: questions[0] },
   { user: users[0], test: tests[1], current_question: questions[1] }
+])
+
+badge = Badge.create!([
+  { title: "All backend tests", image_url: "https://www.flaticon.com/free-icon/badge_969088?term=badges&page=1&position=10&origin=tag&related_id=969088", role: "all_tests_from_backend", criteria: "Complete 5 tests" },
+  { title: "First try", image_url: "https://www.flaticon.com/free-icon/badge_969052?term=badges&related_id=969052", role: "first_try", criteria: "Pass the test on the first try" },
+  { title: "All tests by level", image_url: "https://www.flaticon.com/free-icon/badge_969016?term=badges&related_id=969016", role: "all_tests_by_level", criteria: "Complete all tests by the level" }
 ])
