@@ -1,0 +1,14 @@
+<h3>Badge</h3>
+
+<p>Title: <%= @badge.title %></p>
+<p>Image: <%= image_tag @badge.image_url, style: 'height:10%;width:auto;' %></p>
+<p>Role: <%= @badge.role %></p>
+<p>Criteria: <%= @badge.criteria %></p>
+
+<p><%= link_to "Edit", edit_admin_badge_path(@badge) %></p>
+<p><%= link_to "Delete", admin_badge_path(@badge), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: t(".confirm")
+                  }  %></p>
+
+<p><%= link_to "Back", admin_badges_path(@badge) %></p>
