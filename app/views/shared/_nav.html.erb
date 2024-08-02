@@ -7,7 +7,7 @@
   <span class="navbar-text">
     <% if user_signed_in? %>
       <p class="nav user">
-      <%= t(".greeting") %>, <b><%= link_to "aasda", guru_path(current_user) %><b>
+      <%= t(".greeting") %>, <b><%= link_to current_user.email, guru_path(current_user) %><b>
       <%= link_to t(".logout"), destroy_user_session_path, data: {turbo_method: :delete} %>
     <% else %>
       <%= link_to t(".login"), new_user_session_path %> |

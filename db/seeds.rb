@@ -23,17 +23,17 @@ users[0].confirm
 users[1].confirm
 
 categories = Category.create!([
-  { title: 'Ruby' },
-  { title: 'JS' }
+  { title: 'Backend' },
+  { title: 'Frontend' }
 ])
 
 tests = Test.create!([
   { title: 'Ruby beginner', level: 1, category: categories[0], author: users[0] },
-  { title: 'Ruby advanced', level: 3, category: categories[0], author: users[0] },
-  { title: 'Ruby pro', level: 5, category: categories[0], author: users[0] },
+  { title: 'Ruby advanced', level: 2, category: categories[0], author: users[0] },
+  { title: 'Ruby pro', level: 3, category: categories[0], author: users[0] },
   { title: 'JS beginner', level: 1, category: categories[1], author: users[0] },
-  { title: 'JS advanced', level: 4, category: categories[1], author: users[0] },
-  { title: 'JS pro', level: 15, category: categories[1], author: users[0] }
+  { title: 'JS advanced', level: 2, category: categories[1], author: users[0] },
+  { title: 'JS pro', level: 3, category: categories[1], author: users[0] }
 ])
 
 questions = Question.create!([
@@ -89,7 +89,12 @@ TestPassage.create!([
 ])
 
 badge = Badge.create!([
-  { title: "All backend tests", image_url: "https://www.flaticon.com/free-icon/badge_969088?term=badges&page=1&position=10&origin=tag&related_id=969088", role: "all_tests_from_backend", criteria: "Complete 5 tests" },
-  { title: "First try", image_url: "https://www.flaticon.com/free-icon/badge_969052?term=badges&related_id=969052", role: "first_try", criteria: "Pass the test on the first try" },
-  { title: "All tests by level", image_url: "https://www.flaticon.com/free-icon/badge_969016?term=badges&related_id=969016", role: "all_tests_by_level", criteria: "Complete all tests by the level" }
+  { title: "All backend tests", image_url: "https://www.flaticon.com/free-icon/badge_969088?term=badges&page=1&position=10&origin=tag&related_id=969088", role: "Complete 5 tests", criteria: "all_category" },
+  { title: "First try", image_url: "https://www.flaticon.com/free-icon/badge_969052?term=badges&related_id=969052", role: "Pass the test on the first try", criteria: "first_try" },
+  { title: "All tests by level", image_url: "https://www.flaticon.com/free-icon/badge_969016?term=badges&related_id=969016", role: "Complete all tests by the level", criteria: "all_level" }
+])
+
+UserBadge.create!([
+  { user_id: user[0].id, badge_id: badge[0].id },
+  { user_id: user[0].id, badge_id: badge[1].id }
 ])
