@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout },
               controllers: { sessions: 'users/sessions' }
 
+  get 'guru', to: 'users#show'
+
   resources :tests, only: :index do
     post :start, on: :member
   end
@@ -13,7 +15,7 @@ Rails.application.routes.draw do
   end
 
   resources :feedbacks, only: %i[new create]
-  
+  resources :badges, only: :index
   resources :gists, only: :create
 
   namespace :admin do
@@ -26,7 +28,7 @@ Rails.application.routes.draw do
     end
 
     resources :gists, only: :index
-
+    resources :badges
     resources :feedbacks
   end
 end

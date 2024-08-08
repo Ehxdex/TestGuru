@@ -1,0 +1,18 @@
+<tbody>
+  <tr class="fw-normal">
+    <td><%= badge.title %></td>
+    <td><%= image_tag badge.image_url,style: 'height:10%;width:auto;' %></td>
+    <td><%= badge.role %></td>
+    <td><%= badge.criteria %></td>
+    <td class="align-middle"><%= link_to "Show", admin_badge_path(badge) %></td>
+    <td class="align-middle"><%= link_to "Edit",edit_admin_badge_path(badge) %></td>
+    <td class="align-middle">
+      <%= link_to "Delete", 
+                    admin_badge_path(badge), 
+                    data: {
+                      turbo_method: :delete,
+                      turbo_confirm: t(".confirm")
+                    } %>
+    </td>             
+  </tr>
+</tbody>
