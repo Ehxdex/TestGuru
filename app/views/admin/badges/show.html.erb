@@ -2,7 +2,7 @@
 
 <p>Title: <%= @badge.title %></p>
 <p>Image: <%= image_tag @badge.image_url, style: 'height:10%;width:auto;' %></p>
-<p>Role: <%= @badge.role %></p>
+<p>Role: <%= @badge.rule %></p>
 <p>Criteria: <%= @badge.criteria %></p>
 
 <p><%= link_to "Edit", edit_admin_badge_path(@badge) %></p>

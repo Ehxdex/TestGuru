@@ -89,9 +89,9 @@ TestPassage.create!([
 ])
 
 badge = Badge.create!([
-  { title: "All backend tests", image_url: "https://www.flaticon.com/free-icon/badge_969088?term=badges&page=1&position=10&origin=tag&related_id=969088", role: "Complete 5 tests", criteria: "all_category" },
-  { title: "First try", image_url: "https://www.flaticon.com/free-icon/badge_969052?term=badges&related_id=969052", role: "Pass the test on the first try", criteria: "first_try" },
-  { title: "All tests by level", image_url: "https://www.flaticon.com/free-icon/badge_969016?term=badges&related_id=969016", role: "Complete all tests by the level", criteria: "all_level" }
+  { title: "All tests by category", image_url: "https://clipground.com/images/badge-icon-png-4.png", rule: "Complete all tests by category", criteria: "all_category" },
+  { title: "First try", image_url: "https://clipground.com/images/badge-icon-png-4.png", rule: "Pass the test on the first try", criteria: "first_try" },
+  { title: "All tests by level", image_url: "https://clipground.com/images/badge-icon-png-4.png", rule: "Complete all tests by the level", criteria: "all_level" }
 ])
 
 UserBadge.create!([

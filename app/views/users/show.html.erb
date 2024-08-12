@@ -1,13 +1,19 @@
-<h1>Users profile</h1>
+<div class="mt-4">
+  <h2>User profile</h2>
+  <div class="mt-2">
+    <p>First name: <%= current_user.first_name %></p>
+    <p>Last name: <%= current_user.last_name %></p>
+    <p>Email name: <%= current_user.email %></p>
+    <table class="table">      
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Badge image</th>
+        <th scope="col">Rule</th>
+        <th scope="col">Criteria</th>
+      </tr>
+      <%= render "user_badges" %>
+    </table>
+  </div>
+</div>
 
-<p>First name: <%= current_user.first_name %></p>
-<p>Last name: <%= current_user.last_name %></p>
-<p>Email name: <%= current_user.email %></p>
-<p>Badges: <% current_user.badges.each do |b| %>
-            <p>Title: <%= b.title %></p>
-            <p><%= image_tag b.image_url %></p>
-            <p><%= b.role %></p>
-            <p><%= b.criteria %></p>
-          <% end %>
-</p>
 <%= link_to "Back", root_path %>

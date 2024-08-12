@@ -1,0 +1,10 @@
+<tbody>
+  <tr class="fw-normal">
+    Badges: <% current_user.badges.each do |b| %>
+            <td>Title: <%= b.title %></td>
+            <td><%= image_tag b.image_url %></td>
+            <td><%= b.rule %></td>
+            <td><%= b.criteria %></td>
+          <% end %>
+  </tr>
+</tbody>

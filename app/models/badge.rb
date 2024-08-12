@@ -4,6 +4,8 @@ class Badge < ApplicationRecord
 
   validates :title, presence: true
   validates :image_url, presence: true, format: { with: URI::regexp(%w(http https)) }
-  validates :role, presence: true
+  validates :rule, presence: true
   validates :criteria, presence: true
+
+  enum criterias: %i[first_try all_category all_level]
 end
