@@ -95,6 +95,6 @@ badge = Badge.create!([
 ])
 
 UserBadge.create!([
-  { user_id: user[0].id, badge_id: badge[0].id },
-  { user_id: user[0].id, badge_id: badge[1].id }
+  { user_id: users[0].id, badge_id: badge[0].id },
+  { user_id: users[0].id, badge_id: badge[1].id }
 ])
