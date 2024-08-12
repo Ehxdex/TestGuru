@@ -151,6 +151,19 @@ ru:
         name: "Имя"
         created_at: "Дата создания"
         back: "Назад"
+    
+    badges:
+      index: 
+        header: "Бейджи"
+        title: "Название"
+        image: "Изображение"
+        rule: "Правило получения"
+        actions: "Действия"
+      show:
+        header: "Бейджи"
+        title: "Название"
+        image: "Изображение"
+        rule: "Правило получения"
 
   errors:
     messages:

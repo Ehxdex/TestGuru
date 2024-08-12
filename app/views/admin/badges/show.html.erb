@@ -1,9 +1,8 @@
-<h3>Badge</h3>
+<h3><%= t('.header') %></h3>
 
-<p>Title: <%= @badge.title %></p>
-<p>Image: <%= image_tag @badge.image_url, style: 'height:10%;width:auto;' %></p>
-<p>Role: <%= @badge.rule %></p>
-<p>Criteria: <%= @badge.criteria %></p>
+<p><%= t('.title') %>: <%= @badge.title %></p>
+<p><%= t('.image') %>: <%= image_tag @badge.image_url, style: 'height:10%;width:auto;' %></p>
+<p><%= t('.rule') %>: <%= @badge.rule %></p>
 
 <p><%= link_to "Edit", edit_admin_badge_path(@badge) %></p>
 <p><%= link_to "Delete", admin_badge_path(@badge), data: {

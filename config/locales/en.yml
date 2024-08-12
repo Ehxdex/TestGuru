@@ -180,6 +180,18 @@ en:
         name: "Name"
         created_at: "Created at"
         back: "Back"
+    badges:
+      index: 
+        header: "Badges"
+        title: "Title"
+        image: "Image"
+        rule: "Rule"
+        actions: "Actions"
+      show:
+        header: "Badges"
+        title: "Title"
+        image: "Image"
+        rule: "Rule"
 
   errors:
     messages:
