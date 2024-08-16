@@ -43,6 +43,24 @@ ru:
     create:
       success: "Gist успешно сохранен! <a href=%{url} target=_blank rel=noopener noreferrer>посмотреть на Github</a>"
       failure: "Во время сохранения gist произошла ошибка"
+  
+  badges:
+    index:
+      header: "Баджи"
+      title: "Название"
+      image: "Изображение"
+      rule: "Правило"
+  
+  users:
+    show:
+      user_profile: "Профиль пользователя"
+      first_name: "Имя"
+      last_name: "Фамилия"
+      badges_header: "Баджи"
+      title: "Название"
+      image: "Бадж"
+      rule: "Правило"
+      back: "Назад"
 
   admin:
     nav:
@@ -214,11 +232,6 @@ ru:
       logout: "Выйти"
       signup: "Зарегистрироваться"
       login: "Войти"
-
-  users:
-    sessions:
-      create:
-        hello: "Привет!"
 
   services:
     gist_question_service:
