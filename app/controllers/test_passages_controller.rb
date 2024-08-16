@@ -10,8 +10,8 @@ class TestPassagesController < ApplicationController
     @test_passage.accept!(params[:answer_ids])
 
     if @test_passage.completed?
-      give_badge_to_user = UserBadgeService.new(@test_passage).give_badge
-      @test_passage.user.badges << give_badge_to_user
+      UserBadgeService.new(@test_passage).give_badge
+      
       TestsMailer.completed_test(@test_passage).deliver!
       redirect_to result_test_passage_path(@test_passage)
     else
