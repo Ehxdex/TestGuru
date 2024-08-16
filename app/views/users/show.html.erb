@@ -9,9 +9,8 @@
         <th scope="col">Title</th>
         <th scope="col">Badge image</th>
         <th scope="col">Rule</th>
-        <th scope="col">Criteria</th>
       </tr>
-      <%= render "user_badges" %>
+      <%= render current_user.badges %>
     </table>
   </div>
 </div>
