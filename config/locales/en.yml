@@ -58,6 +58,7 @@ en:
 
   test_passages:
     show:
+      time_remains: "Time remains"
       header: "Passing the"
       next: "Следующий вопрос"
       gist_question: "Gist Question"

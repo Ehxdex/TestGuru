@@ -1,3 +1,9 @@
+<% unless @test_passage.test.timer.zero? %>
+  <p>
+    <%= t('.time_remains') %>: <div id="timer" data-duration="<%= @test_passage.time_remains %>"></div>
+  </p>
+<% end %>
+
 <div class="progress">
   <%= content_tag :div, 
       number_to_percentage(@test_passage.success_calculation, precision: 0), 
@@ -6,7 +12,7 @@
 </div>
 
 <div class="fw-normal">
-  <h1><%= t('.header')%> <%= @test_passage.test.title %>Test</h1>
+  <h1><%= t('.header') %> <%= @test_passage.test.title %> Test</h1>
 
   <p>
     <b><%= @test_passage.current_question.body %></b>

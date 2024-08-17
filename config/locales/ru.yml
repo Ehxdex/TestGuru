@@ -28,6 +28,7 @@ ru:
     
   test_passages:
     show:
+      time_remains: "Осталось времени"
       header: "Прохождение"
       next: "Следующий вопрос"
       gist_question: "Гист Вопрос"

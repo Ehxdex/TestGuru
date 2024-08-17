@@ -31,6 +31,14 @@ class TestPassage < ApplicationRecord
   def test_passed?
     success_calculation >= SUCCESS_RATE 
   end
+
+  def time_duration
+    (Time.current - self.created_at).to_i
+  end
+
+  def time_remains
+    (test.timer * 60) - time_duration
+  end
   
   private
   
