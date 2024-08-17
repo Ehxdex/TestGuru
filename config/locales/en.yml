@@ -113,6 +113,7 @@ en:
         title: "Title"
         level: "Level"
         category_id: "Category ID"
+        timer: "Timer"
         questions_header: "Questions"
         new_question: "New question"
         edit_test: "Edit test"

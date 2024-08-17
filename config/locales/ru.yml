@@ -84,6 +84,7 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "ID категории"
+        timer: "Таймер"
         questions_header: "Вопросы"
         new_question: "Новый вопрос"
         edit_test: "Редактировать тест"
