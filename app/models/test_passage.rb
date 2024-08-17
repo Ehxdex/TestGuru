@@ -29,7 +29,7 @@ class TestPassage < ApplicationRecord
   end
 
   def test_passed?
-    success_calculation >= SUCCESS_RATE 
+    in_time? && success_calculation >= SUCCESS_RATE 
   end
 
   def time_duration
@@ -60,5 +60,9 @@ class TestPassage < ApplicationRecord
     else
       test.questions.first
     end
+  end
+
+  def in_time?
+    time_remains.zero? || time_duration <= test.timer
   end
 end
