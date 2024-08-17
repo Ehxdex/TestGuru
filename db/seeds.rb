@@ -7,10 +7,12 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 TestPassage.destroy_all
+UserBadge.destroy_all
 Answer.destroy_all
 Question.destroy_all
 Test.destroy_all
 Category.destroy_all
+Badge.destroy_all
 User.destroy_all
 
 users = User.create!([
@@ -21,17 +23,17 @@ users[0].confirm
 users[1].confirm
 
 categories = Category.create!([
-  { title: 'Ruby' },
-  { title: 'JS' }
+  { title: 'Backend' },
+  { title: 'Frontend' }
 ])
 
 tests = Test.create!([
   { title: 'Ruby beginner', level: 1, category: categories[0], author: users[0] },
-  { title: 'Ruby advanced', level: 3, category: categories[0], author: users[0] },
-  { title: 'Ruby pro', level: 5, category: categories[0], author: users[0] },
+  { title: 'Ruby advanced', level: 2, category: categories[0], author: users[0] },
+  { title: 'Ruby pro', level: 3, category: categories[0], author: users[0] },
   { title: 'JS beginner', level: 1, category: categories[1], author: users[0] },
-  { title: 'JS advanced', level: 4, category: categories[1], author: users[0] },
-  { title: 'JS pro', level: 15, category: categories[1], author: users[0] }
+  { title: 'JS advanced', level: 2, category: categories[1], author: users[0] },
+  { title: 'JS pro', level: 3, category: categories[1], author: users[0] }
 ])
 
 questions = Question.create!([
@@ -84,4 +86,15 @@ Answer.create!([
 TestPassage.create!([
   { user: users[0], test: tests[0], current_question: questions[0] },
   { user: users[0], test: tests[1], current_question: questions[1] }
+])
+
+badge = Badge.create!([
+  { title: "All tests by category", image_url: "https://clipground.com/images/badge-icon-png-4.png", rule: "Complete all tests by category", criteria: "all_category" },
+  { title: "First try", image_url: "https://clipground.com/images/badge-icon-png-4.png", rule: "Pass the test on the first try", criteria: "first_try" },
+  { title: "All tests by level", image_url: "https://clipground.com/images/badge-icon-png-4.png", rule: "Complete all tests by the level", criteria: "all_level" }
+])
+
+UserBadge.create!([
+  { user_id: users[0].id, badge_id: badge[0].id },
+  { user_id: users[0].id, badge_id: badge[1].id }
 ])

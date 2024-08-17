@@ -1,0 +1,12 @@
+<h2><%= t('.header') %></h2>
+
+ <table class="table">      
+  <tr>
+    <th scope="col"><%= t('.title') %> </th>
+    <th scope="col"><%= t('.image') %></th>
+    <th scope="col"><%= t('.rule') %></th>
+  </tr>
+  <%= render @badges %>
+</table>
+
+<%= link_to "Back", root_path%>

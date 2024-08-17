@@ -1,0 +1,19 @@
+<div class="mt-4">
+  <h2><%= t(".user_profile") %></h2>
+  <div class="mt-2">
+    <p><%= t(".first_name") %>: <%= current_user.first_name %></p>
+    <p><%= t(".last_name") %>: <%= current_user.last_name %></p>
+    <p>Email: <%= current_user.email %></p>
+    <table class="table">
+      <p><%= t(".badges_header") %></p>
+      <tr>
+        <th scope="col"><%= t(".title") %></th>
+        <th scope="col"><%= t(".image") %></th>
+        <th scope="col"><%= t(".rule") %></th>
+      </tr>
+      <%= render current_user.badges %>
+    </table>
+  </div>
+</div>
+
+<%= link_to t(".back"), root_path %>

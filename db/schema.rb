@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_07_17_103310) do
+ActiveRecord::Schema[7.0].define(version: 2024_07_23_081023) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,6 +21,15 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_17_103310) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["question_id"], name: "index_answers_on_question_id"
+  end
+
+  create_table "badges", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "image_url", null: false
+    t.string "rule", null: false
+    t.string "criteria", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "categories", force: :cascade do |t|
@@ -78,6 +87,15 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_17_103310) do
     t.index ["category_id"], name: "index_tests_on_category_id"
   end
 
+  create_table "user_badges", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "badge_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["badge_id"], name: "index_user_badges_on_badge_id"
+    t.index ["user_id"], name: "index_user_badges_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "first_name", null: false
     t.string "email", default: "", null: false
@@ -108,4 +126,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_17_103310) do
   add_foreign_key "test_passages", "users"
   add_foreign_key "tests", "categories"
   add_foreign_key "tests", "users", column: "author_id", on_delete: :cascade
+  add_foreign_key "user_badges", "badges"
+  add_foreign_key "user_badges", "users"
 end
