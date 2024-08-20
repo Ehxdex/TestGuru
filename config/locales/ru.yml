@@ -62,6 +62,9 @@ ru:
       image: "Бадж"
       rule: "Правило"
       back: "Назад"
+    sessions:
+      create:
+        hello: "Привет!"
 
   admin:
     nav:

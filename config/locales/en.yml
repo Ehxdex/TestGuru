@@ -92,6 +92,9 @@ en:
         image: "Badge image"
         rule: "Rule"
         back: "Back"
+      sessions:
+        create:
+          hello: "Hello!"
 
   admin:
     nav:
