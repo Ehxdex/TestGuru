@@ -28,6 +28,7 @@ ru:
     
   test_passages:
     show:
+      time_remains: "Осталось времени"
       header: "Прохождение"
       next: "Следующий вопрос"
       gist_question: "Гист Вопрос"
@@ -61,6 +62,9 @@ ru:
       image: "Бадж"
       rule: "Правило"
       back: "Назад"
+    sessions:
+      create:
+        hello: "Привет!"
 
   admin:
     nav:
@@ -84,6 +88,7 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "ID категории"
+        timer: "Таймер"
         questions_header: "Вопросы"
         new_question: "Новый вопрос"
         edit_test: "Редактировать тест"

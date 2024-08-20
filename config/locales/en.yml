@@ -58,6 +58,7 @@ en:
 
   test_passages:
     show:
+      time_remains: "Time remains"
       header: "Passing the"
       next: "Следующий вопрос"
       gist_question: "Gist Question"
@@ -91,6 +92,9 @@ en:
         image: "Badge image"
         rule: "Rule"
         back: "Back"
+      sessions:
+        create:
+          hello: "Hello!"
 
   admin:
     nav:
@@ -113,6 +117,7 @@ en:
         title: "Title"
         level: "Level"
         category_id: "Category ID"
+        timer: "Timer"
         questions_header: "Questions"
         new_question: "New question"
         edit_test: "Edit test"

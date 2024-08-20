@@ -1,3 +1,9 @@
+<% unless @test_passage.test.timer.zero? %>
+  <p>
+    <%= t('.time_remains') %>: <div id="timer" data-duration="<%= @test_passage.time_remains %>"></div>
+  </p>
+<% end %>
+
 <div class="progress">
   <%= content_tag :div, 
       number_to_percentage(@test_passage.success_calculation, precision: 0), 
@@ -6,13 +12,13 @@
 </div>
 
 <div class="fw-normal">
-  <h1><%= t('.header')%> <%= @test_passage.test.title %>Test</h1>
+  <h1><%= t('.header') %> <%= @test_passage.test.title %> Test</h1>
 
   <p>
     <b><%= @test_passage.current_question.body %></b>
   </p>
 
-  <%= form_with url: test_passage_path(@test_passage), local: false, data: { turbo: false }, method: :put do |form| %>
+  <%= form_with url: test_passage_path(@test_passage), local: false, id: :answer_form, data: { turbo: false }, method: :put do |form| %>
     <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
       <p>  
         <%= b.check_box id: "answer_ids_#{b.object.id}" %>
